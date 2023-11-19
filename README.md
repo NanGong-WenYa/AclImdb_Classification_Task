@@ -6,7 +6,7 @@
 *conda 23.9.0
 *pytorch 2.1.0
 *CUDA 12.3
-*GPU NVIDIA GeForce MX550
+*GPU NVIDIA GeForce RTX 3060 Laptop GPU
 
 #训练参数
 *pretrained_model:bert_base_cased
