@@ -1,40 +1,251 @@
 # 基本说明
-* 本项目是基于HuggingFace提供的transformers库中的bert-base-cased模型对aclImdb的影评。
-* 文本做情感二分类的处理。
+- 本项目是2211757赵元鸣的计算机前沿技术的郭文雅老师指导的作业
+- 本项目是基于HuggingFace提供的transformers库中的bert-base-cased模型对aclImdb的影评。
+- 对文本做情感二分类的处理。
 
 # 运行环境
-* conda 23.9.0
-* pytorch 2.1.0
-* CUDA 12.3
-* GPU NVIDIA GeForce RTX 3060 Laptop GPU
+- conda 23.9.0
+- pytorch 2.1.0
+- CUDA 12.3
+- GPU NVIDIA GeForce RTX 3060 Laptop GPU
 
 # 训练参数
-* pretrained_model: bert_base_cased
-* epoch: 10
-* batch_size: 120
-* optimizer: AdamW
-* criterion: CrossEntropyLoss
-* tokenizer: truncation=True, max_length=500, padding=max_Length
-* dataset: IMDB (trainset 25000条，testset 25000条）
+- pretrained_model: bert_base_cased
+- epoch: 10
+- batch_size: 120
+- optimizer: AdamW
+- criterion: CrossEntropyLoss
+- tokenizer: truncation=True, max_length=500, padding=max_Length
+- dataset: IMDB (trainset 25000条，testset 25000条）
 
 # 训练成果
 ## 训练集：
-* Epoch 1/10
-  * Iteration 0, Loss: 0.6752526164054871, Accuracy: 0.6333333333333333
-  * Iteration 10, Loss: 0.6776291131973267, Accuracy: 0.6666666666666666
-  * Iteration 20, Loss: 0.6820762157440186, Accuracy: 0.5833333333333334
-  * ...（中间省略）
-  * Iteration 200, Loss: 0.6319226026535034, Accuracy: 0.7166666666666667
-* Epoch 2/10
-  * Iteration 0, Loss: 0.6330417394638062, Accuracy: 0.7416666666666667
-  * Iteration 10, Loss: 0.6086034774780273, Accuracy: 0.7833333333333333
-  * ...（中间省略）
-  * Iteration 200, Loss: 0.5158011317253113, Accuracy: 0.7833333333333333
+- Epoch 1/10
+- teration 0, Loss: 0.6752526164054871, Accuracy: 0.6333333333333333
+- Iteration 10, Loss: 0.6776291131973267, Accuracy: 0.6666666666666666
+- Iteration 20, Loss: 0.6820762157440186, Accuracy: 0.5833333333333334
+- Iteration 30, Loss: 0.6709997057914734, Accuracy: 0.65
+- Iteration 40, Loss: 0.6770995259284973, Accuracy: 0.5916666666666667
+- Iteration 50, Loss: 0.6685202121734619, Accuracy: 0.6833333333333333
+- Iteration 60, Loss: 0.660487949848175, Accuracy: 0.6916666666666667
+- Iteration 70, Loss: 0.6623037457466125, Accuracy: 0.7083333333333334
+- Iteration 80, Loss: 0.6654340624809265, Accuracy: 0.65
+- Iteration 90, Loss: 0.6594411730766296, Accuracy: 0.7166666666666667
+- Iteration 100, Loss: 0.6651867628097534, Accuracy: 0.6166666666666667
+- Iteration 110, Loss: 0.6611458659172058, Accuracy: 0.6916666666666667
+- Iteration 120, Loss: 0.6537171602249146, Accuracy: 0.6666666666666666
+- Iteration 130, Loss: 0.6561301350593567, Accuracy: 0.6916666666666667
+- Iteration 140, Loss: 0.6437733173370361, Accuracy: 0.6833333333333333
+- Iteration 150, Loss: 0.6311740279197693, Accuracy: 0.7666666666666667
+- Iteration 160, Loss: 0.642667829990387, Accuracy: 0.675
+- Iteration 170, Loss: 0.6255592703819275, Accuracy: 0.7833333333333333
+- Iteration 180, Loss: 0.6382560729980469, Accuracy: 0.7166666666666667
+- Iteration 190, Loss: 0.6293145418167114, Accuracy: 0.7916666666666666
+- Iteration 200, Loss: 0.6319226026535034, Accuracy: 0.7166666666666667
+- Epoch 2/10
+- Iteration 0, Loss: 0.6330417394638062, Accuracy: 0.7416666666666667
+- Iteration 10, Loss: 0.6086034774780273, Accuracy: 0.7833333333333333
+- Iteration 20, Loss: 0.6426573395729065, Accuracy: 0.6916666666666667
+- Iteration 30, Loss: 0.6332893371582031, Accuracy: 0.7083333333333334
+- Iteration 40, Loss: 0.6296579241752625, Accuracy: 0.6583333333333333
+- Iteration 50, Loss: 0.5993963479995728, Accuracy: 0.7583333333333333
+- Iteration 60, Loss: 0.6012504696846008, Accuracy: 0.8
+- Iteration 70, Loss: 0.6183418035507202, Accuracy: 0.7166666666666667
+- Iteration 80, Loss: 0.5958144664764404, Accuracy: 0.7583333333333333
+- Iteration 90, Loss: 0.5998592972755432, Accuracy: 0.7916666666666666
+- Iteration 100, Loss: 0.6188981533050537, Accuracy: 0.7416666666666667
+- Iteration 110, Loss: 0.6144856810569763, Accuracy: 0.725
+- Iteration 120, Loss: 0.6109276413917542, Accuracy: 0.7166666666666667
+- Iteration 130, Loss: 0.604485273361206, Accuracy: 0.7
+- Iteration 140, Loss: 0.5981820821762085, Accuracy: 0.775
+- Iteration 150, Loss: 0.6119450926780701, Accuracy: 0.6916666666666667
+- Iteration 160, Loss: 0.5904664993286133, Accuracy: 0.7916666666666666
+- Iteration 170, Loss: 0.5837200880050659, Accuracy: 0.7583333333333333
+- Iteration 180, Loss: 0.597231924533844, Accuracy: 0.7416666666666667
+- Iteration 190, Loss: 0.59731125831604, Accuracy: 0.7166666666666667
+- Iteration 200, Loss: 0.5786986947059631, Accuracy: 0.7583333333333333
+- Epoch 3/10
+- Iteration 0, Loss: 0.5696691870689392, Accuracy: 0.7583333333333333
+- Iteration 10, Loss: 0.6369485855102539, Accuracy: 0.65
+- Iteration 20, Loss: 0.6325897574424744, Accuracy: 0.6583333333333333
+- Iteration 30, Loss: 0.6193419694900513, Accuracy: 0.7333333333333333
+- Iteration 40, Loss: 0.5989023447036743, Accuracy: 0.725
+- Iteration 50, Loss: 0.5693085789680481, Accuracy: 0.7833333333333333
+- Iteration 60, Loss: 0.5938153862953186, Accuracy: 0.725
+- Iteration 70, Loss: 0.5680015683174133, Accuracy: 0.7583333333333333
+- Iteration 80, Loss: 0.5854043960571289, Accuracy: 0.6833333333333333
+- Iteration 90, Loss: 0.5898750424385071, Accuracy: 0.7583333333333333
+- Iteration 100, Loss: 0.5941551327705383, Accuracy: 0.7333333333333333
+- Iteration 110, Loss: 0.5789369940757751, Accuracy: 0.7333333333333333
+- Iteration 120, Loss: 0.5584545135498047, Accuracy: 0.775
+- Iteration 130, Loss: 0.6047996878623962, Accuracy: 0.7
+- Iteration 140, Loss: 0.631495475769043, Accuracy: 0.7
+- Iteration 150, Loss: 0.5751236081123352, Accuracy: 0.7583333333333333
+- Iteration 160, Loss: 0.586119532585144, Accuracy: 0.7083333333333334
+- Iteration 170, Loss: 0.6066223978996277, Accuracy: 0.6666666666666666
+- Iteration 180, Loss: 0.5630602240562439, Accuracy: 0.75
+- Iteration 190, Loss: 0.5685492753982544, Accuracy: 0.7333333333333333
+- Iteration 200, Loss: 0.5874109268188477, Accuracy: 0.7583333333333333
+- Epoch 4/10
+- Iteration 0, Loss: 0.5703213810920715, Accuracy: 0.725
+- Iteration 10, Loss: 0.6054579615592957, Accuracy: 0.6916666666666667
+- Iteration 20, Loss: 0.6170504689216614, Accuracy: 0.65
+- Iteration 30, Loss: 0.5296927094459534, Accuracy: 0.8333333333333334
+- Iteration 40, Loss: 0.5291154384613037, Accuracy: 0.8166666666666667
+- Iteration 50, Loss: 0.5548667311668396, Accuracy: 0.7666666666666667
+- Iteration 60, Loss: 0.5389106869697571, Accuracy: 0.8083333333333333
+- Iteration 70, Loss: 0.5596111416816711, Accuracy: 0.7416666666666667
+- Iteration 80, Loss: 0.550746738910675, Accuracy: 0.7833333333333333
+- Iteration 90, Loss: 0.5614031553268433, Accuracy: 0.725
+- Iteration 100, Loss: 0.5692918300628662, Accuracy: 0.75
+- Iteration 110, Loss: 0.5828367471694946, Accuracy: 0.7166666666666667
+- Iteration 120, Loss: 0.5214006900787354, Accuracy: 0.8416666666666667
+- Iteration 130, Loss: 0.6091654300689697, Accuracy: 0.65
+- Iteration 140, Loss: 0.566278874874115, Accuracy: 0.7583333333333333
+- Iteration 150, Loss: 0.5404561161994934, Accuracy: 0.8
+- Iteration 160, Loss: 0.6076338291168213, Accuracy: 0.6916666666666667
+- Iteration 170, Loss: 0.5737742781639099, Accuracy: 0.7083333333333334
+- Iteration 180, Loss: 0.6114367246627808, Accuracy: 0.6583333333333333
+- Iteration 190, Loss: 0.5475272536277771, Accuracy: 0.7916666666666666
+- Iteration 200, Loss: 0.5152747631072998, Accuracy: 0.825
+- Epoch 5/10
+- Iteration 0, Loss: 0.5608685612678528, Accuracy: 0.7666666666666667
+- Iteration 10, Loss: 0.5579036474227905, Accuracy: 0.75
+- Iteration 20, Loss: 0.5164843797683716, Accuracy: 0.775
+- Iteration 30, Loss: 0.5483783483505249, Accuracy: 0.7333333333333333
+- Iteration 40, Loss: 0.546944260597229, Accuracy: 0.775
+- Iteration 50, Loss: 0.5786150097846985, Accuracy: 0.6833333333333333
+- Iteration 60, Loss: 0.5375166535377502, Accuracy: 0.75
+- Iteration 70, Loss: 0.542518675327301, Accuracy: 0.8
+- Iteration 80, Loss: 0.5560364127159119, Accuracy: 0.775
+- Iteration 90, Loss: 0.5720527768135071, Accuracy: 0.7
+- Iteration 100, Loss: 0.5483046174049377, Accuracy: 0.7666666666666667
+- Iteration 110, Loss: 0.5393996834754944, Accuracy: 0.7916666666666666
+- Iteration 120, Loss: 0.5357221364974976, Accuracy: 0.8083333333333333
+- Iteration 130, Loss: 0.5540868639945984, Accuracy: 0.7583333333333333
+- Iteration 140, Loss: 0.5334487557411194, Accuracy: 0.7916666666666666
+- Iteration 150, Loss: 0.5176917314529419, Accuracy: 0.7416666666666667
+- Iteration 160, Loss: 0.56231290102005, Accuracy: 0.7166666666666667
+- Iteration 170, Loss: 0.5370202660560608, Accuracy: 0.775
+- Iteration 180, Loss: 0.535455048084259, Accuracy: 0.7583333333333333
+- Iteration 190, Loss: 0.52860426902771, Accuracy: 0.775
+- Iteration 200, Loss: 0.5574322938919067, Accuracy: 0.725
+- Epoch 6/10
+- Iteration 0, Loss: 0.5457477569580078, Accuracy: 0.725
+- Iteration 10, Loss: 0.5580114722251892, Accuracy: 0.7416666666666667
+- Iteration 20, Loss: 0.5606668591499329, Accuracy: 0.7583333333333333
+- Iteration 30, Loss: 0.5787470936775208, Accuracy: 0.7333333333333333
+- Iteration 40, Loss: 0.5264427065849304, Accuracy: 0.7833333333333333
+- Iteration 50, Loss: 0.5089163780212402, Accuracy: 0.8083333333333333
+- Iteration 60, Loss: 0.5263679623603821, Accuracy: 0.725
+- Iteration 70, Loss: 0.5154937505722046, Accuracy: 0.8083333333333333
+- Iteration 80, Loss: 0.5258151292800903, Accuracy: 0.8
+- Iteration 90, Loss: 0.5099782347679138, Accuracy: 0.7916666666666666
+- Iteration 100, Loss: 0.46494612097740173, Accuracy: 0.8666666666666667
+- Iteration 110, Loss: 0.5519282817840576, Accuracy: 0.7333333333333333
+- Iteration 120, Loss: 0.542806088924408, Accuracy: 0.775
+- Iteration 130, Loss: 0.539492666721344, Accuracy: 0.7916666666666666
+- Iteration 140, Loss: 0.5074487328529358, Accuracy: 0.8166666666666667
+- Iteration 150, Loss: 0.5434818863868713, Accuracy: 0.7666666666666667
+- Iteration 160, Loss: 0.4900287091732025, Accuracy: 0.8166666666666667
+- Iteration 170, Loss: 0.48215821385383606, Accuracy: 0.8166666666666667
+- Iteration 180, Loss: 0.524219274520874, Accuracy: 0.7583333333333333
+- Iteration 190, Loss: 0.5306548476219177, Accuracy: 0.75
+- Iteration 200, Loss: 0.5294617414474487, Accuracy: 0.7666666666666667
+- Epoch 7/10
+- Iteration 0, Loss: 0.5307552814483643, Accuracy: 0.7583333333333333
+- Iteration 10, Loss: 0.49011117219924927, Accuracy: 0.7833333333333333
+- Iteration 20, Loss: 0.5390385389328003, Accuracy: 0.7416666666666667
+- Iteration 30, Loss: 0.5465456247329712, Accuracy: 0.7666666666666667
+- Iteration 40, Loss: 0.49667614698410034, Accuracy: 0.825
+- Iteration 50, Loss: 0.5241165161132812, Accuracy: 0.7916666666666666
+- Iteration 60, Loss: 0.49033021926879883, Accuracy: 0.775
+- Iteration 70, Loss: 0.48184338212013245, Accuracy: 0.825
+- Iteration 80, Loss: 0.563338577747345, Accuracy: 0.7333333333333333
+- Iteration 90, Loss: 0.4871208071708679, Accuracy: 0.8166666666666667
+- Iteration 100, Loss: 0.5016668438911438, Accuracy: 0.775
+- Iteration 110, Loss: 0.49364280700683594, Accuracy: 0.8083333333333333
+- Iteration 120, Loss: 0.527418851852417, Accuracy: 0.7666666666666667
+- Iteration 130, Loss: 0.5170424580574036, Accuracy: 0.7833333333333333
+- Iteration 140, Loss: 0.515845537185669, Accuracy: 0.7583333333333333
+- Iteration 150, Loss: 0.5612583160400391, Accuracy: 0.7583333333333333
+- Iteration 160, Loss: 0.4864856004714966, Accuracy: 0.8083333333333333
+- Iteration 170, Loss: 0.4789417088031769, Accuracy: 0.8166666666666667
+- Iteration 180, Loss: 0.5053993463516235, Accuracy: 0.825
+- Iteration 190, Loss: 0.5505905151367188, Accuracy: 0.7333333333333333
+- Iteration 200, Loss: 0.5191828012466431, Accuracy: 0.7833333333333333
+- Epoch 8/10
+- Iteration 0, Loss: 0.5185521841049194, Accuracy: 0.7416666666666667
+- Iteration 10, Loss: 0.5577700138092041, Accuracy: 0.7
+- Iteration 20, Loss: 0.47960764169692993, Accuracy: 0.825
+- Iteration 30, Loss: 0.5881063938140869, Accuracy: 0.6416666666666667
+- Iteration 40, Loss: 0.5108353495597839, Accuracy: 0.775
+- Iteration 50, Loss: 0.5078461170196533, Accuracy: 0.7916666666666666
+- Iteration 60, Loss: 0.5078662633895874, Accuracy: 0.7583333333333333
+- Iteration 70, Loss: 0.5472499132156372, Accuracy: 0.7083333333333334
+- Iteration 80, Loss: 0.48670944571495056, Accuracy: 0.8
+- Iteration 90, Loss: 0.5048189759254456, Accuracy: 0.7583333333333333
+- Iteration 100, Loss: 0.5188592076301575, Accuracy: 0.7666666666666667
+- Iteration 110, Loss: 0.5646394491195679, Accuracy: 0.725
+- Iteration 120, Loss: 0.4914245903491974, Accuracy: 0.75
+- Iteration 130, Loss: 0.5159353017807007, Accuracy: 0.7666666666666667
+- Iteration 140, Loss: 0.539275586605072, Accuracy: 0.7333333333333333
+- Iteration 150, Loss: 0.5226839780807495, Accuracy: 0.7583333333333333
+- Iteration 160, Loss: 0.4864315688610077, Accuracy: 0.7916666666666666
+- Iteration 170, Loss: 0.533247172832489, Accuracy: 0.7666666666666667
+- Iteration 180, Loss: 0.444491446018219, Accuracy: 0.8833333333333333
+- Iteration 190, Loss: 0.5026542544364929, Accuracy: 0.7833333333333333
+- Iteration 200, Loss: 0.48774421215057373, Accuracy: 0.7833333333333333
+- Epoch 9/10
+- Iteration 0, Loss: 0.5082007646560669, Accuracy: 0.7583333333333333
+- Iteration 10, Loss: 0.5357276797294617, Accuracy: 0.7416666666666667
+- Iteration 20, Loss: 0.5230942368507385, Accuracy: 0.7833333333333333
+- Iteration 30, Loss: 0.46858376264572144, Accuracy: 0.8
+- Iteration 40, Loss: 0.5157313942909241, Accuracy: 0.7583333333333333
+- Iteration 50, Loss: 0.5284146666526794, Accuracy: 0.7166666666666667
+- Iteration 60, Loss: 0.5498266220092773, Accuracy: 0.75
+- Iteration 70, Loss: 0.5195887088775635, Accuracy: 0.7666666666666667
+- Iteration 80, Loss: 0.5043043494224548, Accuracy: 0.7333333333333333
+- Iteration 90, Loss: 0.5658569931983948, Accuracy: 0.725
+- Iteration 100, Loss: 0.5110946297645569, Accuracy: 0.775
+- Iteration 110, Loss: 0.507938027381897, Accuracy: 0.775
+- Iteration 120, Loss: 0.4848414361476898, Accuracy: 0.7833333333333333
+- Iteration 130, Loss: 0.48381736874580383, Accuracy: 0.8166666666666667
+- Iteration 140, Loss: 0.5570593476295471, Accuracy: 0.7083333333333334
+- Iteration 150, Loss: 0.5044016242027283, Accuracy: 0.7916666666666666
+- Iteration 160, Loss: 0.5231650471687317, Accuracy: 0.7583333333333333
+- Iteration 170, Loss: 0.5695350766181946, Accuracy: 0.7
+- Iteration 180, Loss: 0.5591003894805908, Accuracy: 0.7416666666666667
+- Iteration 190, Loss: 0.5456941723823547, Accuracy: 0.7666666666666667
+- Iteration 200, Loss: 0.49574536085128784, Accuracy: 0.8
+- Epoch 10/10
+- Iteration 0, Loss: 0.49739882349967957, Accuracy: 0.8166666666666667
+- Iteration 10, Loss: 0.499154657125473, Accuracy: 0.7916666666666666
+- Iteration 20, Loss: 0.462858647108078, Accuracy: 0.7833333333333333
+- Iteration 30, Loss: 0.4837471544742584, Accuracy: 0.8083333333333333
+- Iteration 40, Loss: 0.5322718024253845, Accuracy: 0.75
+- Iteration 50, Loss: 0.47934702038764954, Accuracy: 0.7916666666666666
+- Iteration 60, Loss: 0.5132110118865967, Accuracy: 0.725
+- Iteration 70, Loss: 0.4781707227230072, Accuracy: 0.775
+- Iteration 80, Loss: 0.5593439340591431, Accuracy: 0.7333333333333333
+- Iteration 90, Loss: 0.5230969190597534, Accuracy: 0.7583333333333333
+- Iteration 100, Loss: 0.5391746163368225, Accuracy: 0.7416666666666667
+- Iteration 110, Loss: 0.5324385166168213, Accuracy: 0.75
+- Iteration 120, Loss: 0.4848831295967102, Accuracy: 0.8333333333333334
+- Iteration 130, Loss: 0.5160340070724487, Accuracy: 0.775
+- Iteration 140, Loss: 0.5859248042106628, Accuracy: 0.7166666666666667
+- Iteration 150, Loss: 0.4961848855018616, Accuracy: 0.8166666666666667
+- Iteration 160, Loss: 0.413595587015152, Accuracy: 0.875
+- Iteration 170, Loss: 0.5304993987083435, Accuracy: 0.75
+- Iteration 180, Loss: 0.5223826169967651, Accuracy: 0.7416666666666667
+- Iteration 190, Loss: 0.5146161317825317, Accuracy: 0.7666666666666667
+- Iteration 200, Loss: 0.5158011317253113, Accuracy: 0.7833333333333333
 
 ## 测试集
-* Accuracy: 0.77125
+- Accuracy: 0.77125
 
-## 结果分析
-* 收敛情况：训练集准确度逐渐增加表明模型在训练时学习到了数据的特征，并在测试集上表现良好，这说明模型没有出现严重的过拟合。
-* 局限性分析：考虑到数据集规模和模型复杂性，可能还有进一步提高模型性能的空间。尝试调整超参数、增加数据量或尝试其他预训练模型。
-* 可行性：模型在测试集上的表现较好，还需对其性能进行更深入的评估和测试。
+## 完成过程
+- 本人在听完郭老师的课程之后，用大约两周的时间观看了李沐在B站上的有关深度学习的视频，学习了python中的矩阵运算，梯度等数学知识
+- 和损失函数，优化函数等内容，在电脑上完成了pytorch的开发环境的准备
+- 然后学习了transformer模型的相关知识，艰难地读了Attention is All You Need论文
+- 之后着手于这个项目，选择模型，编写python代码，选择模型超参数，然后进行训练
